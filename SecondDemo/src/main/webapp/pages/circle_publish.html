@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <!--声明文档兼容模式，表示使用IE浏览器的最新模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Responsive layout：响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>創建圈子</title> 
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入图标字体 -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/publish.css">
+</head>
+<body>
+	<div class="container">
+        <div class="form row">
+            <div class="form-horizontal col-sm-offset-3 col-md-offset-3" id="goods_form">
+                <h3 class="form-title">創建圈子</h3>
+                <div class="col-sm-9 col-md-9">         
+                    <!-- form-inline -->                                                                
+                    <div class="form-group margin-bottom-sm ">
+                        <label for="goods_name" class="control-label">圈子暱稱</label>
+                        <input class="form-control required" type="text" placeholder="一個有特點的名字更容易吸引志同道合的小夥伴哦~" id="goods_name" name="goods_name"/>
+                    </div>
+                    <div class="form-group dropdown">
+                        <label for="goods_type" class="control-label">圈子標籤</label>
+                        <select class="form-control" id="goods_type">
+                            <option>书本</option>
+                            <option>運動</option>
+                            <option>服饰</option>
+                            <option>数码</option>
+                            <option>动漫</option>
+                            <option>游戏</option>
+                            <option>宅</option>
+                            <option>二次元</option>
+                            <option>LGBT</option>
+                            <option>種草</option>
+                            <option>養生</option>
+                            <option>旅行</option>
+                            <option>美食</option>
+                        </select>                                                  
+                    </div>
+                     <div class="form-group margin-bottom-sm ">
+                        <label for="goods_price" class="control-label">圈子人數上限</label>
+                        <input class="form-control required" type="number" placeholder="圈子最多人數" id="goods_price" name="goods_price"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="goods_description" class="control-label">圈子描述</label>
+                        <textarea  class="form-control" rows="5" id="goods_desc" name="goods_desc">志同道合的小夥伴有哪些特質：&#10圈子主要討論的內容：：</textarea>                        
+                    </div>
+                    <div class="form-group">
+                        <label for="uploadImage" class="control-label">圈子頭像</label>
+                        <input class="file form-control" type="file" name="uploadImage" id="uploadImage"/>                                        
+                    </div>  
+                    <div class="form-group col-md-offset-9">
+                        <input type="button" value="創建" class="btn btn-info center-block" name="publish" onclick="publish()"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/js/fileinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/js/locales/zh.js"></script>
+    <script type="text/javascript" src="../js/publish.js"></script>
+</body>
+</html>

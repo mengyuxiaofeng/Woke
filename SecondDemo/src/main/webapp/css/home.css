@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.header{
+	position: relative;
+	z-index: 1px;
+}
+.header .navbar{
+/* 	height:100px;  */
+	color:#fff; 
+	text-align:center;
+}
+.banner{ 
+	position:relative; 
+	z-index:0; 
+	margin:100px auto; 
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--声明文档兼容模式，表示使用IE浏览器的最新模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Responsive layout：响应式布局-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>个人中心</title>
+
+	<!-- 引入Bootstrap核心样式文件 -->
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入图标字体 -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+<body>
+<div class="header">
+<!-- 添加navbar-fixed-top可以让导航条一直固定在顶部，不会因为滚动条改变而改变，navbar-inverse让导航条黑底展示 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+　　<div class="container">　　<!-- container让导航条居中container-fluid让导航条自适应 -->　　
+　　　　<div class="navbar-header">
+　　　　　　 <!-- 代表响应式布局：当浏览器宽度小于某个值时导航栏折叠变成三道杠 -->
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" type="button">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+       <!-- //代表导航栏左侧logo或者图标  -->   
+　　　　 　　<!-- <a class="navbar-brand" href="http://www.baidu.com">浏览器博物馆</a> -->
+            <span class="navbar-brand">蜗壳</span>
+        </div>
+　　　　<!-- //导航条内容，为了响应式布局，点击三道杠弹出导航栏 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">           
+　　　　　　　　<!-- //代表导航栏中的项目 -->
+　　　　　　 <ul class="nav navbar-nav">
+                <li><a onclick="getGoods()" href="javascript:void(0)"><span class="glyphicon glyphicon-home"></span>二手市场</a></li>
+                <li><a onclick="getCircle()" href="javascript:void(0)"><span class="glyphicon glyphicon-globe"></span>活力圈子</a></li>   
+                <li><a onclick="getNews()" href="javascript:void(0)"><span class="glyphicon glyphicon-bell"></span>消息列表</a></li>
+                <li><a onclick="getUser()" href="javascript:void(0)"><span class="glyphicon glyphicon-user"></span>个人中心</a></li>
+                <form class="navbar-form navbar-left" role="search">
+		            <div class="form-group has-feedback">
+		            	<span class="glyphicon glyphicon-search form-control-feedback"></span>
+			            <input type="text" class="form-control" placeholder="Search">
+			        <!-- <button type="button" class="btn btn-default">搜索</button> -->
+		            </div>		       
+	            </form>
+            </ul>
+            <!-- 搜索框 -->
+            <!-- <form class="navbar-form navbar-left" role="search">
+		       <div class="form-group">
+			        <input type="text" class="form-control" placeholder="Search">
+			        <button type="submit" class="btn btn-default">搜索</button>
+		       </div>
+		       
+	       </form> -->
+	       <!-- 登录注册 -->
+	       <!-- <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+           </ul> -->
+        </div>
+    </div>
+</nav>
+</div>
+<div class="banner">
+    这里是你的内容
+</div>
+<!-- 引入jQuery核心js文件 -->
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 引入BootStrap核心js文件 -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

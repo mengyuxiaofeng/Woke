@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <!--声明文档兼容模式，表示使用IE浏览器的最新模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Responsive layout：响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录</title> 
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入图标字体 -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+<!--     <link rel="stylesheet" href="css/bootstrapValidator.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="form row">
+            <div class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form">
+                <h3 class="form-title">蜗壳</h3>
+                <div class="col-sm-9 col-md-9">
+                    <!-- <div class="form-group margin-bottom-sm">
+                        <i class="fa fa-user fa-lg"></i>
+                        <input class="form-control required" type="text" placeholder="手机号" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-lock fa-lg"></i>
+                        <input class="form-control required" type="password" placeholder="密码" id="password" name="password" maxlength="20"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="remember" value="1"/>记住我
+                        </label>
+                    </div> -->
+                    <div class="form-group margin-bottom-sm">
+                        <span class="form-group-addon"><i class="fa fa-user fa-lg"></i></span>
+                        <input class="form-control required" type="text" placeholder="手机号" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+                    </div>
+                    <div class="form-group">
+                        <span class="form-group-addon"><i class="fa fa-lock fa-lg"></i></span>
+                        <input class="form-control required" type="password" placeholder="密码" id="password" name="password" maxlength="20"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="remember" value="1"/>记住我
+                        </label>
+                    </div>
+                    <div class="form-group col-md-offset-9">
+                        <button class="btn btn-info pull-left" name="register" onclick="userRegister()">注册</button>
+                        <button class="btn btn-success pull-right" name="login" onclick="userLogin()">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+<!--     <script type="text/javascript" src="js/bootstrapValidator.min.js"></script> -->
+<!--     <script type="text/javascript" src="js/zh_CN.js"></script> -->
+</body>
+</html>

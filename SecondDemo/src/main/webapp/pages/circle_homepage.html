@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <!--声明文档兼容模式，表示使用IE浏览器的最新模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Responsive layout：响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>圈子详情</title>
+
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="css/normal.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/home.css" />
+    <link rel="stylesheet" type="text/css" href="../css/personal_homepage.css" />
+    <link rel="stylesheet" type="text/css" href="../css/circle.css">
+</head>
+
+<body>
+<div class="header">
+<!-- 添加navbar-fixed-top可以让导航条一直固定在顶部，不会因为滚动条改变而改变，navbar-inverse让导航条黑底展示 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+　　<div class="container">　　<!-- container让导航条居中container-fluid让导航条自适应 -->　　
+　　　　<div class="navbar-header">
+　　　　　　 <!-- 代表响应式布局：当浏览器宽度小于某个值时导航栏折叠变成三道杠 -->
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" type="button">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+       <!-- //代表导航栏左侧logo或者图标  -->   
+　　　　 　　<!-- <a class="navbar-brand" href="http://www.baidu.com">浏览器博物馆</a> -->
+            <span class="navbar-brand">蜗壳</span>
+        </div>
+　　　　<!-- //导航条内容，为了响应式布局，点击三道杠弹出导航栏 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">           
+　　　　　　　　<!-- //代表导航栏中的项目 -->
+　　　　　　 <ul class="nav navbar-nav">
+                <li><a onclick="getGoods()" href="javascript:void(0)"><span class="glyphicon glyphicon-home"></span>二手市场</a></li>
+                <li><a onclick="getCircle()" href="javascript:void(0)"><span class="glyphicon glyphicon-globe"></span>活力圈子</a></li>   
+                <li><a onclick="getNews()" href="javascript:void(0)"><span class="glyphicon glyphicon-bell"></span>消息列表</a></li>
+                <li><a onclick="getUser()" href="javascript:void(0)"><span class="glyphicon glyphicon-user"></span>个人中心</a></li>
+                <form class="navbar-form navbar-left" role="search">
+		            <div class="form-group has-feedback">
+		            	<span class="glyphicon glyphicon-search form-control-feedback"></span>
+			            <input type="text" class="form-control" placeholder="Search">
+			        <!-- <button type="button" class="btn btn-default">搜索</button> -->
+		            </div>		       
+	            </form>
+            </ul>
+            <!-- 搜索框 -->
+            <!-- <form class="navbar-form navbar-left" role="search">
+		       <div class="form-group">
+			        <input type="text" class="form-control" placeholder="Search">
+			        <button type="submit" class="btn btn-default">搜索</button>
+		       </div>
+		       
+	       </form> -->
+	       <!-- 登录注册 -->
+	       <!-- <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+           </ul> -->
+        </div>
+    </div>
+</nav>
+</div>
+       <div class="banner">
+        <!--start .main    by li-->
+
+        <div class="main">
+
+            <!--start .basic-->
+
+            <div class="basic row">
+                <div class="col-3" id="head-icon">
+
+                    <!--<%&#45;&#45;实现效果：点击图片出现file选择框&#45;&#45;%>
+                    <label for="file_up" style="cursor: pointer"><img src="images/head-icon.png" /></label>
+                    <input type="file" name="img" id="file_up"  style="display: none;">
+                    <%&#45;&#45;效果结束&#45;&#45;%>-->
+                    <!--		<form action="" method="post">
+                        <label for="file_up" class="gengai">
+                            <img class="changeimg" src="images/head-icon.png" />
+                            <span class="userlogo">✐ 编辑 </span>
+                        </label>
+                        <input type="file" name="img" id="file_up"  style="display: none;">
+                        </form>
+
+                        <div class="">
+
+                        </div>-->
+
+
+                    <form method="post" action="" enctype="multipart/form-data">
+
+                       
+                            <img class="changeimg" src="images/head-icon.png" height="150px" width="150px" />
+                        
+                    </form>
+
+
+
+                </div>
+                <div class="basic-infor col-9">
+                    <h2>圈子暱稱 
+                        <button type="button" class="guanzhu" onclick="alert('test-custom')" style="width:100px; height:30px;">關注</button>
+                    </h2>
+                    <h4>圈子標籤&nbsp&nbsp&nbsp&nbsp&nbsp<label readonly="true">數碼</label></h4>
+                    <p>機械鍵盤的交流空間</p>
+                    
+                </div>
+            </div>
+
+            <!----------------------------------end .basic------------------------------------------------->
+            <!----------------------------------start .tabs------------------------------------------------->
+
+            <div class="tabs">
+                <!--	<input type="radio" id="" name="tab-control" checked=" checked" />
+                <input type="radio" id="" name="tab-control" />
+                <input type="radio" id="" name="tab-control" />
+                <input type="radio" id="" name="tab-control" />-->
+                <ul>
+                    <li title="tab" onclick="liclick1()"><label for="tab" role="button"><span style="color: #929daf;">圈子簡介</span></label></li>
+                    <li title="tab" onclick="liclick2()"><label for="tab" role="button"><span>全部動態</span></label></li>
+                    <li title="tab" onclick="liclick3()"><label for="tab" role="button"><span>全部商品</span></label></li>
+                 
+                </ul>
+                <!---<div class="slider">
+                <div class="indicator">
+                </div>-->
+                <div class="content">
+                    <section id="tab1">
+                        <h2>圈子簡介</h2>
+                        <h4>創建信息</h4>
+                        <hr />
+                        <p>圈子創建時間<span>2019/05/07</span></p>
+                        <p>圈子創建人<span>&nbsp&nbsp&nbsp張三</span></p>
+                        <h4>圈子內容</h4>
+                        <hr />
+                        <div id="hidden">
+                            <p>圈子昵称<span id="hidden1">羽毛球集散地</span></p>
+                            <p>圈子標籤<span id="hidden2">運動</span></p>
+                            <p>圈子內容<span id="hidden3">喜歡打羽毛球的小夥伴看過來~約約約</span></p>
+                            <p>關注的人<span id="hidden4">張三 李四 王五</span></p>
+                            
+                        </div>
+                        
+                    </section>
+                    <section id="tab2">
+                        <h2>全部動態</h2>
+                        <div class="mine row">
+                            <div class="mine-img col-3">
+                                <img src="images/demo.jpg" />
+                            </div>
+                            <div class="mine-txt col-9">
+                                <h3>發佈人<button class="btn-xs">詳細內容</button></h3>
+                                <p>動態簡要信息</p>
+                                
+                            </div>
+                        </div>
+                    </section>
+                    <section id="tab3">
+                        <h2>全部商品</h2>
+                        <div class="mine row">
+                            <div class="mine-img col-3">
+                                <img src="images/demo.jpg" />
+                            </div>
+                            <div class="mine-txt col-9">
+                                <h3>商品名称<button class="btn-xs">詳細內容</button></h3>
+                                <p>商品信息简介</p>
+                                <p>商品状态：出售中</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    
+                </div>
+
+
+            </div>
+
+            <!--end .tabs-->
+
+        </div>
+    </div>
+    <!-- 引入jQuery核心js文件 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 引入BootStrap核心js文件 -->
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--tab切换   by li-->
+    <script type="text/javascript">
+        function liclick1() {
+            var tab1 = document.getElementById("tab1");
+            var tab2 = document.getElementById("tab2");
+            var tab3 = document.getElementById("tab3");
+            var tab4 = document.getElementById("tab4");
+            var tab5 = document.getElementById("tab5");
+            var tab6 = document.getElementById("tab6");
+            tab1.style.display = 'block';
+            tab2.style.display = 'none';
+            tab3.style.display = 'none';
+            tab4.style.display = 'none';
+            tab5.style.display = 'none';
+            tab6.style.display = 'none';
+        }
+        function liclick2() {
+            var tab1 = document.getElementById("tab1");
+            var tab2 = document.getElementById("tab2");
+            var tab3 = document.getElementById("tab3");
+            var tab4 = document.getElementById("tab4");
+            var tab5 = document.getElementById("tab5");
+            var tab6 = document.getElementById("tab6");
+            tab1.style.display = 'none';
+            tab2.style.display = 'block';
+            tab3.style.display = 'none';
+            tab4.style.display = 'none';
+            tab5.style.display = 'none';
+            tab6.style.display = 'none';
+        }
+        function liclick3() {
+            var tab1 = document.getElementById("tab1");
+            var tab2 = document.getElementById("tab2");
+            var tab3 = document.getElementById("tab3");
+            var tab4 = document.getElementById("tab4");
+            var tab5 = document.getElementById("tab5");
+            var tab6 = document.getElementById("tab6");
+            tab1.style.display = 'none';
+            tab2.style.display = 'none';
+            tab3.style.display = 'block';
+            tab4.style.display = 'none';
+            tab5.style.display = 'none';
+            tab6.style.display = 'none';
+        }
+        function liclick4() {
+            var tab1 = document.getElementById("tab1");
+            var tab2 = document.getElementById("tab2");
+            var tab3 = document.getElementById("tab3");
+            var tab4 = document.getElementById("tab4");
+            var tab5 = document.getElementById("tab5");
+            var tab6 = document.getElementById("tab6");
+            tab1.style.display = 'none';
+            tab2.style.display = 'none';
+            tab3.style.display = 'none';
+            tab4.style.display = 'block';
+            tab5.style.display = 'none';
+            tab6.style.display = 'none';
+        }
+        function liclick5() {
+            var tab1 = document.getElementById("tab1");
+            var tab2 = document.getElementById("tab2");
+            var tab3 = document.getElementById("tab3");
+            var tab4 = document.getElementById("tab4");
+            var tab5 = document.getElementById("tab5");
+            var tab6 = document.getElementById("tab6");
+            tab1.style.display = 'none';
+            tab2.style.display = 'none';
+            tab3.style.display = 'none';
+            tab4.style.display = 'none';
+            tab5.style.display = 'block';
+            tab6.style.display = 'none';
+         }
+         function liclick4() {
+            var tab1 = document.getElementById("tab1");
+            var tab2 = document.getElementById("tab2");
+            var tab3 = document.getElementById("tab3");
+            var tab4 = document.getElementById("tab4");
+            var tab5 = document.getElementById("tab5");
+            var tab6 = document.getElementById("tab6");
+            tab1.style.display = 'none';
+            tab2.style.display = 'none';
+            tab3.style.display = 'none';
+            tab4.style.display = 'none';
+            tab5.style.display = 'none';
+            tab6.style.display = 'block';
+        }
+        function changes() {
+            var hidden = document.getElementById("hidden");
+            var homepage = document.getElementById("homepage");
+            var Hinput = homepage.getElementsByTagName("input");
+            var hidden1 = document.getElementById("hidden1");
+            var hidden2 = document.getElementById("hidden2");
+            var hidden3 = document.getElementById("hidden3");
+            var hidden4 = document.getElementById("hidden4");
+            var hidden5 = document.getElementById("hidden5");
+            var hidden6 = document.getElementById("hidden6");
+            var hidden7 = document.getElementById("hidden7");
+            var hidden8 = document.getElementById("hidden8");
+            var Hsubmit = Hinput[9];
+            hidden.style.display = 'none';
+            homepage.style.display = 'block';
+
+            Hsubmit.onclick = function () {
+                hidden.style.display = 'block';
+                homepage.style.display = 'none';
+                hidden1.innerHTML = Hinput[0].value;
+                hidden2.innerHTML = Hinput[1].value;
+                hidden3.innerHTML = Hinput[3].value;
+                hidden4.innerHTML = Hinput[4].value;
+                hidden5.innerHTML = Hinput[5].value;
+                hidden6.innerHTML = Hinput[6].value;
+                hidden7.innerHTML = Hinput[7].value;
+                hidden8.innerHTML = Hinput[8].value;
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <!--声明文档兼容模式，表示使用IE浏览器的最新模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Responsive layout：响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>发布商品</title> 
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入图标字体 -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/publish.css">
+</head>
+<body>
+	<div class="container">
+        <div class="form row">
+            <div class="form-horizontal col-sm-offset-3 col-md-offset-3" id="goods_form">
+                <h3 class="form-title">商品信息</h3>
+                <div class="col-sm-9 col-md-9">         
+                    <!-- form-inline -->                                                                
+                    <div class="form-group margin-bottom-sm ">
+                        <label for="goods_name" class="control-label">商品名称</label>
+                        <input class="form-control required" type="text" placeholder="商品名称" id="goods_name" name="goods_name"/>
+                    </div>
+                    <div class="form-group dropdown">
+                        <label for="goods_type" class="control-label">商品类别</label>
+                        <select class="form-control" id="goods_type">
+                            <option>书本</option>
+                            <option>生活</option>
+                            <option>服饰</option>
+                            <option>数码</option>
+                            <option>动漫</option>
+                            <option>游戏</option>
+                        </select>                                                  
+                    </div>
+                     <div class="form-group margin-bottom-sm ">
+                        <label for="goods_price" class="control-label">商品价格</label>
+                        <input class="form-control required" type="number" placeholder="商品价格" id="goods_price" name="goods_price"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="goods_description" class="control-label">商品描述</label>
+                        <textarea  class="form-control" rows="5" id="goods_desc" name="goods_desc">新旧程度：&#10转手原因：&#10品牌型号：</textarea>                        
+                    </div>
+                    <div class="form-group">
+                        <label for="uploadImage" class="control-label">商品图片</label>
+                        <input class="file form-control" type="file" name="uploadImage" id="uploadImage"/>                                        
+                    </div>  
+                    <div class="form-group col-md-offset-9">
+                        <input type="button" value="发布商品" class="btn btn-info center-block" name="publish" onclick="publish()"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/js/fileinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.1/js/locales/zh.js"></script>
+    <script type="text/javascript" src="../js/publish.js"></script>
+</body>
+</html>
