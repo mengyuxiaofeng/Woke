@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.header{
+	position: relative;
+	z-index: 1px;
+}
+.header .navbar{
+/* 	height:100px;  */
+	color:#fff; 
+	text-align:center;
+}
+.banner{ 
+	position:relative; 
+	z-index:0; 
+	margin:130px auto; 
+}
+.navbar-header {margin: 0 auto;}
+
+.btn-circle {
+  text-align: center;
+  border-radius: 75px;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+.btn1{
+	background-color: #FEAE1B;
+    border-color: #FEAE1B;
+	margin:5px 0px 0px 50px;
+}
+.btn-color{
+	background-color: #FEAE1B;
+    border-color: #FEAE1B;
+}
+.goods_list_desc{
+	position:relative;
+	left:30px;
+	margin:10px;
+}
